@@ -1,0 +1,26 @@
+﻿<!-- メインウィンドウ -->
+    
+<Window x:Class="StackPanelDragAndDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        mc:Ignorable="d"
+        Title="StackPanel Drag＆Drop" Width="720" Height="160"
+        >
+
+    <!-- クライアント領域 -->
+    <StackPanel x:Name="xMainPanel" Orientation="Horizontal"
+                MouseLeftButtonDown="OnMainPanelMouseLeftButtonDown"
+                MouseMove="OnMainPanelMouseMove"
+                MouseLeftButtonUp="OnMainPanelMouseLeftButtonUp"
+                LostMouseCapture="OnMainPanelLostMouseCapture"
+                >
+        <i:Interaction.Behaviors>
+            <ei:FluidMoveBehavior AppliesTo="Children" Duration="0:0:0.5"/>
+        </i:Interaction.Behaviors>
+    </StackPanel>
+
+</Window>

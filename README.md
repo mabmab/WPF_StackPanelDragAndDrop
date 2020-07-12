@@ -1,1 +1,2 @@
 # WPF_StackPanelDragAndDrop
+StackPanel内のアイテムをドラッグ＆ドロップで移動させるコードサンプル。
